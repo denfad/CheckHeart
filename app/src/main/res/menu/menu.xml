@@ -6,6 +6,16 @@
         android:title="Пульс"/>
 
     <item
+        android:id="@+id/graph_menu"
+        android:icon="@drawable/ic_graphic_24dp"
+        android:title="Графики"/>
+
+    <item
+        android:id="@+id/statistic_menu"
+        android:icon="@drawable/ic_statistics"
+        android:title="Статистика"/>
+
+    <item
         android:id="@+id/profile_menu"
         android:icon="@drawable/ic_profile_24dp"
         android:title="Профиль" />
@@ -14,5 +24,4 @@
         android:id="@+id/diagnose_menu"
         android:icon="@drawable/ic_diagnose_24dp"
         android:title="Диагнозы" />
-
 </menu>

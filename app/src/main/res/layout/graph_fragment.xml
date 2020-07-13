@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor">
+
+    <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_gravity="center"
+        app:neomorph_background_color="@color/backgroundColor"
+        app:neomorph_corner_radius="16dp"
+        app:neomorph_elevation="4dp"
+        app:neomorph_highlight_color="#FFFFFF"
+        app:neomorph_layer_type="software"
+        app:neomorph_shadow_color="#8A8A8A"
+        app:neomorph_shadow_type="outer"
+        app:neomorph_view_type="rectangular">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+                android:id="@+id/ppg_button_neomorph"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:neomorph_background_color="#00DCDCDD"
+                app:neomorph_corner_radius="16dp"
+                android:layout_marginHorizontal="5dp"
+                app:neomorph_elevation="2dp"
+                app:neomorph_highlight_color="#FFFFFF"
+                app:neomorph_layer_type="software"
+                app:neomorph_shadow_color="#8A8A8A"
+                app:neomorph_shadow_type="outer"
+                app:neomorph_view_type="rectangular"
+                app:neomorph_shadow_visible="false">
+
+                <Button
+                    android:id="@+id/ppg_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00E87465"
+                    android:gravity="center_vertical"
+                    android:text="ППГ"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent" />
+            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+                android:id="@+id/ecg_button_neomorph"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                app:neomorph_background_color="#00DCDCDD"
+                app:neomorph_corner_radius="16dp"
+                app:neomorph_elevation="2dp"
+                app:neomorph_highlight_color="#FFFFFF"
+                app:neomorph_layer_type="software"
+                app:neomorph_shadow_color="#8A8A8A"
+                app:neomorph_shadow_type="outer"
+                app:neomorph_view_type="rectangular"
+                app:neomorph_shadow_visible="false">
+
+                <Button
+                    android:id="@+id/ecg_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00E87465"
+                    android:gravity="center_vertical"
+                    android:text="ЭКГ"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent" />
+            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+        </LinearLayout>
+    </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_graph_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

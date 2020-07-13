@@ -85,8 +85,8 @@ public class DiagnoseFragment extends Fragment {
                 .enqueue(new Callback<List<ClientDiagnose>>() {
                     @Override
                     public void onResponse(Call<List<ClientDiagnose>> call, Response<List<ClientDiagnose>> response) {
-                        adapter = new DiagnoseAdapter(getContext(),android.R.layout.simple_list_item_1,response.body());
-                        list.setAdapter(adapter);
+                            adapter = new DiagnoseAdapter(getContext(), android.R.layout.simple_list_item_1, response.body());
+                            list.setAdapter(adapter);
                     }
 
                     @Override
