@@ -45,13 +45,12 @@ public class PpgFragment extends Fragment {
     }
 
     private void addGraph(GraphView graphView, double[] arr){
-        DataPoint[] dataPoints = new DataPoint[60];
-        for(int i=0; i<60;i++) {
+        DataPoint[] dataPoints = new DataPoint[arr.length];
+        for(int i=0; i<arr.length;i++) {
             dataPoints[i] = new DataPoint(i + 1, arr[i]);
         }
         LineGraphSeries<DataPoint> series = new LineGraphSeries<>(dataPoints);
         series.setColor(getContext().getColor(R.color.colorAccent));
-        series.setAnimated(true);
         series.setThickness(8);
         graphView.addSeries(series);
     }

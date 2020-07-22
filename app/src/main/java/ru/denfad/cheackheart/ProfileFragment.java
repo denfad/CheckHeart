@@ -71,8 +71,10 @@ public class ProfileFragment extends Fragment {
     private void fill(){
         age.setText(user.getAge().toString());
         sex.setText(user.getSex());
-        height.setText(user.getHeight() + " см");
-        weight.setText(user.getWeight() + " кг");
+        if(user.getHeight()!=null) height.setText(user.getHeight() + " см");
+        else height.setText("Рост не задан");
+        if(user.getWeight()!=null) weight.setText(user.getWeight() + " кг");
+        else weight.setText("Вес не задан");
     }
 
     private void updateUser(){

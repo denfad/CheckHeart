@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/backgroundColor">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check Heart"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Регистрация"
+            android:gravity="center"
+            android:textSize="21sp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginVertical="10dp"/>
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:id="@+id/name_regist_neomorph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_above="@+id/password_neomorph"
+            app:neomorph_background_color="@color/backgroundColor"
+            app:neomorph_corner_radius="16dp"
+            app:neomorph_elevation="3dp"
+            app:neomorph_highlight_color="#FFFFFF"
+            app:neomorph_layer_type="software"
+            app:neomorph_shadow_color="#8A8A8A"
+            app:neomorph_shadow_type="inner"
+            app:neomorph_view_type="rectangular">
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00E87465"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                android:hint="Имя"
+                android:paddingVertical="10dp"
+                android:textColorHint="@color/colorAccent" />
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:id="@+id/age_regist_neomorph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_above="@+id/password_neomorph"
+            app:neomorph_background_color="@color/backgroundColor"
+            app:neomorph_corner_radius="16dp"
+            app:neomorph_elevation="3dp"
+            app:neomorph_highlight_color="#FFFFFF"
+            app:neomorph_layer_type="software"
+            app:neomorph_shadow_color="#8A8A8A"
+            app:neomorph_shadow_type="inner"
+            app:neomorph_view_type="rectangular">
+
+            <EditText
+                android:id="@+id/age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00E87465"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                android:hint="Возраст"
+                android:inputType="number"
+                android:paddingVertical="10dp"
+                android:textColorHint="@color/colorAccent" />
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:id="@+id/sex_regist_neomorph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_above="@+id/password_neomorph"
+            app:neomorph_background_color="@color/backgroundColor"
+            app:neomorph_corner_radius="16dp"
+            app:neomorph_elevation="3dp"
+            app:neomorph_highlight_color="#FFFFFF"
+            app:neomorph_layer_type="software"
+            app:neomorph_shadow_color="#8A8A8A"
+            app:neomorph_shadow_type="inner"
+            app:neomorph_view_type="rectangular">
+
+            <Spinner
+                android:id="@+id/sex"
+                android:paddingVertical="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/sex"
+                android:textAlignment="center"/>
+
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:id="@+id/login_regist_neomorph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_above="@+id/password_neomorph"
+            app:neomorph_background_color="@color/backgroundColor"
+            app:neomorph_corner_radius="16dp"
+            app:neomorph_elevation="3dp"
+            app:neomorph_highlight_color="#FFFFFF"
+            app:neomorph_layer_type="software"
+            app:neomorph_shadow_color="#8A8A8A"
+            app:neomorph_shadow_type="inner"
+            app:neomorph_view_type="rectangular">
+
+            <EditText
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00E87465"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                android:hint="Логин"
+                android:paddingVertical="10dp"
+                android:textColorHint="@color/colorAccent" />
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:id="@+id/password_regist_neomorph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_above="@+id/password_neomorph"
+            app:neomorph_background_color="@color/backgroundColor"
+            app:neomorph_corner_radius="16dp"
+            app:neomorph_elevation="3dp"
+            app:neomorph_highlight_color="#FFFFFF"
+            app:neomorph_layer_type="software"
+            app:neomorph_shadow_color="#8A8A8A"
+            app:neomorph_shadow_type="inner"
+            app:neomorph_view_type="rectangular">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00E87465"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                android:hint="Пароль"
+                android:paddingVertical="10dp"
+                android:textColorHint="@color/colorAccent" />
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:id="@+id/regist_button_neomorph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="40dp"
+            app:neomorph_background_color="@color/colorPrimary"
+            app:neomorph_corner_radius="16dp"
+            app:neomorph_elevation="2dp"
+            app:neomorph_highlight_color="#FFFFFF"
+            app:neomorph_layer_type="software"
+            app:neomorph_shadow_color="#8A8A8A"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_view_type="rectangular">
+
+            <Button
+                android:id="@+id/regist_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00E87465"
+                android:backgroundTint="#00E87465"
+                android:gravity="center"
+                android:text="Создать аккаунт"
+                android:textAlignment="center"
+                android:padding="5dp"
+                android:textColor="@color/colorPrimaryDark" />
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+    </LinearLayout>
+
+</ScrollView>

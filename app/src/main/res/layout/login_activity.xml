@@ -28,7 +28,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_margin="5dp"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="40dp"
         android:layout_above="@+id/password_neomorph"
         app:neomorph_background_color="@color/backgroundColor"
         app:neomorph_corner_radius="16dp"
@@ -48,7 +49,6 @@
             android:hint="Ваш логин"
             android:paddingVertical="10dp"
             android:paddingLeft="20dp"
-            android:textColor="@color/material_on_primary_disabled"
             android:textColorHint="@color/colorAccent" />
     </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
@@ -57,7 +57,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_margin="5dp"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="40dp"
         app:neomorph_background_color="@color/backgroundColor"
         app:neomorph_corner_radius="16dp"
         app:neomorph_elevation="3dp"
@@ -76,7 +77,6 @@
             android:hint="Ваш пароль"
             android:paddingVertical="10dp"
             android:paddingLeft="20dp"
-            android:textColor="@color/material_on_primary_disabled"
             android:textColorHint="@color/colorAccent" />
     </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
@@ -87,7 +87,7 @@
         android:layout_below="@+id/password_neomorph"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="40dp"
         app:neomorph_background_color="@color/colorPrimary"
         app:neomorph_corner_radius="16dp"
         app:neomorph_elevation="2dp"
@@ -110,21 +110,18 @@
             android:textColor="@color/colorPrimaryDark" />
     </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
-    <TextView
+    <Button
         android:id="@+id/not_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
         android:background="#00E87465"
-        android:clickable="true"
         android:gravity="center"
-        android:hint="Вы еще не зарегестрированы?"
+        android:textAllCaps="false"
+        android:text="Вы еще не зарегестрированы?"
         android:paddingVertical="10dp"
-        android:paddingLeft="20dp"
-        android:textColor="@color/material_on_primary_disabled"
-        android:textColorHint="@color/colorAccent"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"/>
 
 </RelativeLayout>

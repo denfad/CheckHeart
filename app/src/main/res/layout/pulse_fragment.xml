@@ -13,9 +13,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
         app:neomorph_background_color="@color/backgroundColor"
         app:neomorph_elevation="4dp"
@@ -27,7 +27,7 @@
 
         <ImageView
             android:id="@+id/image_heart"
-            android:padding="10dp"
+            android:padding="15dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/ic_heart_24dp"/>

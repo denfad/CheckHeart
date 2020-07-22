@@ -9,7 +9,6 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.chinodev.androidneomorphframelayout.NeomorphFrameLayout;
@@ -27,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText login;
     private EditText password;
     private Button loginButton;
-    private TextView regist;
+    private Button regist;
     private NeomorphFrameLayout frame;
     private SharedPreferences mSharedPreferences;
     @Override
@@ -45,6 +44,12 @@ public class LoginActivity extends AppCompatActivity {
         frame = findViewById(R.id.login_button_neomorph);
         regist = findViewById(R.id.not_register);
 
+        regist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this,RegistrationActivity.class));
+            }
+        });
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,11 +76,6 @@ public class LoginActivity extends AppCompatActivity {
                     });
             }
         });
-        regist.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
     }
+
 }

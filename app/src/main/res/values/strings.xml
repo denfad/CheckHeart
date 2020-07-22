@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CheackHeart</string>
+
+    <string-array name="sex">
+        <item>Мужчина</item>
+        <item>Женщина</item>
+    </string-array>
 </resources>

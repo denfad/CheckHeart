@@ -22,8 +22,11 @@ public interface JSONPlaceHolderApi {
     public Call<List<ClientDiagnose>> getDiagnoses(@Path("id") Integer userId);
 
     @PUT("/users/diagnose/{id}")
-    public Call<String> saveDiagnoses(@Path("id") int userId, @Body Diagnose diagnose, @Query("year") int year, @Query("month") int month);
+    public Call<Void> saveDiagnoses(@Path("id") int userId, @Body Diagnose diagnose, @Query("year") int year, @Query("month") int month);
 
     @PUT("/users/update")
     public Call<String> updateUser(@Body User user);
+
+    @POST("/users/registration")
+    public Call<User> registUser(@Body User user);
 }

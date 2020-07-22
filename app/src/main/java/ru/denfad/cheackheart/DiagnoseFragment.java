@@ -125,8 +125,8 @@ public class DiagnoseFragment extends Fragment {
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-
-            holder.date.setText(calendar.getDisplayName(Calendar.MONTH,Calendar.LONG,Locale.getDefault())+" "+calendar.get(Calendar.YEAR));
+            int year = calendar.get(Calendar.YEAR)-1900;
+            holder.date.setText(calendar.getDisplayName(Calendar.MONTH,Calendar.LONG,Locale.getDefault())+" "+year);
             holder.diagnose.setText(diagnose.getDiagnose());
 
             convertView.setTag(holder);
@@ -173,30 +173,31 @@ public class DiagnoseFragment extends Fragment {
                     NetworkService.getInstance()
                             .getJSONApi()
                             .saveDiagnoses(user.getId(),diagnose,calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH))
-                            .enqueue(new Callback<String>() {
+                            .enqueue(new Callback<Void>() {
                                 @Override
-                                public void onResponse(Call<String> call, Response<String> response) {
+                                public void onResponse(Call<Void> call, Response<Void> response) {
+                                    NetworkService.getInstance()
+                                            .getJSONApi()
+                                            .getDiagnoses(user.getId())
+                                            .enqueue(new Callback<List<ClientDiagnose>>() {
+                                                @Override
+                                                public void onResponse(Call<List<ClientDiagnose>> call, Response<List<ClientDiagnose>> response) {
+                                                    adapter = new DiagnoseAdapter(getContext(),android.R.layout.simple_list_item_1,response.body());
+                                                    list.setAdapter(adapter);
+                                                }
+
+                                                @Override
+                                                public void onFailure(Call<List<ClientDiagnose>> call, Throwable t) {
+
+                                                }
+                                            });
                                 }
 
                                 @Override
-                                public void onFailure(Call<String> call, Throwable t) {
+                                public void onFailure(Call<Void> call, Throwable t) {
                                 }
                             });
-                    NetworkService.getInstance()
-                            .getJSONApi()
-                            .getDiagnoses(user.getId())
-                            .enqueue(new Callback<List<ClientDiagnose>>() {
-                                @Override
-                                public void onResponse(Call<List<ClientDiagnose>> call, Response<List<ClientDiagnose>> response) {
-                                    adapter = new DiagnoseAdapter(getContext(),android.R.layout.simple_list_item_1,response.body());
-                                    list.setAdapter(adapter);
-                                }
 
-                                @Override
-                                public void onFailure(Call<List<ClientDiagnose>> call, Throwable t) {
-
-                                }
-                            });
                 }
             });
         }
