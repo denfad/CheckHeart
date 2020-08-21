@@ -177,6 +177,8 @@ public class BluetoothWorker {
                 success = true;
                 Log.d("Bluetooth","connected");
                 mState = STATE_CONNECTED;
+                Message msg = mHandler.obtainMessage(STATE_CONNECTED);
+                mHandler.sendMessage(msg);
             }
             catch (IOException e) {
                 e.printStackTrace();
@@ -223,7 +225,7 @@ public class BluetoothWorker {
             try {
                 in = mmSocket.getInputStream();
                 out = mmSocket.getOutputStream();
-                Log.d("Bluetooth","Create streams");
+                Log.d("Bluetooth","Create streams!");
             }
             catch (IOException e) {
                 e.printStackTrace();
@@ -242,6 +244,7 @@ public class BluetoothWorker {
                 try {
                     bytes = connectedInputStream.read(buffer);
                     final String strIncom = new String(buffer, 0, bytes);
+                    Log.d("incom", strIncom);
                     if(strIncom!=null) dao.add(strIncom);
                 }
                 catch (IOException e) {

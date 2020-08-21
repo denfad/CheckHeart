@@ -15,6 +15,8 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -150,7 +152,9 @@ public class DiagnoseFragment extends Fragment {
             getWindow().setAttributes( params);
             this.setContentView(R.layout.add_diagnose_dialog);
 
-            final EditText diagnoseText = findViewById(R.id.diagnose);
+            final Spinner spinner = findViewById(R.id.diagnose);
+            SpinnerAdapter spinAdapter = new ArrayAdapter<String>(getContext(), R.layout.spinner_diagnose_item, getResources().getStringArray(R.array.ills));
+            spinner.setAdapter(spinAdapter);
             final CalendarView calendarView = findViewById(R.id.calendarView);
 
             final Calendar calendar = new GregorianCalendar();
@@ -169,7 +173,7 @@ public class DiagnoseFragment extends Fragment {
                     Animator.buttonPress(neo);
                     AddDiagnoseDialog.this.cancel();
                     Diagnose diagnose = new Diagnose();
-                    diagnose.setDiagnose(diagnoseText.getText().toString());
+                    diagnose.setDiagnose(getResources().getStringArray(R.array.ills)[(int) spinner.getSelectedItemId()]);
                     NetworkService.getInstance()
                             .getJSONApi()
                             .saveDiagnoses(user.getId(),diagnose,calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH))

@@ -142,6 +142,9 @@ public class MainActivity extends AppCompatActivity {
                 case BluetoothAdapter.ERROR:
                     Toast.makeText(getApplicationContext(),"Bluetooth не поддерживается на вашем устройстве!",Toast.LENGTH_LONG).show();
                     break;
+                case BluetoothAdapter.STATE_CONNECTED:
+                    Toast.makeText(getApplicationContext(),"Успешное подключение",Toast.LENGTH_LONG).show();
+                    break;
             }
         };
     };

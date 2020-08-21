@@ -63,6 +63,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     user.setName(name.getText().toString());
                     user.setSex(getResources().getStringArray(R.array.sex)[(int) spinner.getSelectedItemId()]);
                     user.setAge(Integer.valueOf(age.getText().toString()));
+                    user.setSaveData(false);
 
                     Animator.buttonPress((NeomorphFrameLayout) findViewById(R.id.regist_button_neomorph));
                     NetworkService.getInstance()

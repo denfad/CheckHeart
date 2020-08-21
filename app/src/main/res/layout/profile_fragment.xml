@@ -323,16 +323,20 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingVertical="5dp"
-                android:paddingHorizontal="20dp"
-                android:orientation="horizontal">
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="5dp"
+                    android:paddingHorizontal="10dp"
+                    android:orientation="horizontal">
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="#00E87465"
                         android:paddingHorizontal="5dp"
                         android:paddingVertical="2dp"
-                        android:text="Сохранить данные ЭКГ и ФПГ"
+                        android:text="Сохранить данные ЭКГ"
                         android:textColor="@color/colorAccent"
                         android:textSize="26sp"
                         android:textStyle="bold"
@@ -344,8 +348,36 @@
                         android:layout_height="match_parent"
                         android:gravity="center_vertical"
                         android:layout_marginHorizontal="10dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="5dp"
+                    android:paddingHorizontal="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00E87465"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="2dp"
+                        android:text="Сохранить данные ФПГ"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"/>
+
+                    <Switch
+                        android:id="@+id/profile_save_data_ppg_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_marginHorizontal="10dp"/>
+                </LinearLayout>
             </LinearLayout>
+
         </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
 
     </RelativeLayout>
 </ScrollView>

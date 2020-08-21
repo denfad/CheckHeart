@@ -5,4 +5,10 @@
         <item>Мужчина</item>
         <item>Женщина</item>
     </string-array>
+
+    <string-array name="ills">
+        <item>Артериальная гипертензия</item>
+        <item>Аортальная недостаточность</item>
+        <item>Инфаркт миокарда</item>
+    </string-array>
 </resources>
